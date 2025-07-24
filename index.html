@@ -1,0 +1,575 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rishabh Jain - Portfolio</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Cursor Effect -->
+    <div class="cursor"></div>
+    <div class="cursor-dot"></div>
+
+    <!-- Animated Background -->
+    <div class="bg-animated">
+        <div class="bg-orb"></div>
+        <div class="bg-orb"></div>
+        <div class="bg-orb"></div>
+    </div>
+
+    <!-- Stars -->
+    <div class="stars" id="stars"></div>
+
+    <!-- Navigation -->
+    <nav class="navbar" id="navbar">
+        <div class="nav-container">
+            <div class="logo" onclick="showPage('home')">
+                <div class="logo-icon">RJ</div>
+                <div>
+                    <div class="logo-text">Rishabh Jain</div>
+                    <div style="font-size: 0.75rem; color: #64748b;">Full-Stack Developer</div>
+                </div>
+            </div>
+
+            <ul class="nav-menu">
+                <li class="nav-item active" onclick="showPage('home')" data-page="home">
+                    <i class="fas fa-home"></i> Home
+                </li>
+                <li class="nav-item" onclick="showPage('about')" data-page="about">
+                    <i class="fas fa-user"></i> About
+                </li>
+                <li class="nav-item" onclick="showPage('resume')" data-page="resume">
+                    <i class="fas fa-file-alt"></i> Resume
+                </li>
+                <li class="nav-item" onclick="showPage('portfolio')" data-page="portfolio">
+                    <i class="fas fa-briefcase"></i> Portfolio
+                </li>
+                <li class="nav-item" onclick="showPage('contact')" data-page="contact">
+                    <i class="fas fa-envelope"></i> Contact
+                </li>
+            </ul>
+
+            <button class="mobile-menu" onclick="toggleMobileNav()">
+                <i class="fas fa-bars"></i>
+            </button>
+        </div>
+    </nav>
+
+    <!-- Mobile Navigation -->
+    <div class="mobile-nav" id="mobileNav">
+        <div class="mobile-nav-header">
+            <div class="logo">
+                <div class="logo-icon">RJ</div>
+                <div class="logo-text">Rishabh Jain</div>
+            </div>
+            <button class="mobile-menu" onclick="toggleMobileNav()">
+                <i class="fas fa-times"></i>
+            </button>
+        </div>
+        <div class="mobile-nav-items">
+            <div class="mobile-nav-item active" onclick="showPage('home'); toggleMobileNav()" data-page="home">
+                <i class="fas fa-home"></i> Home
+            </div>
+            <div class="mobile-nav-item" onclick="showPage('about'); toggleMobileNav()" data-page="about">
+                <i class="fas fa-user"></i> About
+            </div>
+            <div class="mobile-nav-item" onclick="showPage('resume'); toggleMobileNav()" data-page="resume">
+                <i class="fas fa-file-alt"></i> Resume
+            </div>
+            <div class="mobile-nav-item" onclick="showPage('portfolio'); toggleMobileNav()" data-page="portfolio">
+                <i class="fas fa-briefcase"></i> Portfolio
+            </div>
+            <div class="mobile-nav-item" onclick="showPage('contact'); toggleMobileNav()" data-page="contact">
+                <i class="fas fa-envelope"></i> Contact
+            </div>
+        </div>
+    </div>
+
+    <!-- Home Page -->
+    <div class="page active" id="home">
+        <div class="home-hero">
+            <div class="container">
+                <div class="profile-image">
+                    <div class="profile-circle">RJ</div>
+                </div>
+                
+                <h1 class="hero-title fade-in">
+                    Hello, I'm<br>
+                    <span class="gradient-text">Rishabh Jain</span>
+                </h1>
+                
+                <div class="hero-subtitle fade-in">
+                    Full-Stack Developer • React Expert • UI/UX Enthusiast
+                </div>
+                
+                <p class="hero-description fade-in">
+                    Crafting extraordinary digital experiences with cutting-edge technologies. 
+                    Passionate about creating solutions that make a difference.
+                </p>
+
+                <div class="cta-buttons fade-in">
+                    <button class="btn btn-primary" onclick="showPage('portfolio')">
+                        <i class="fas fa-rocket"></i>
+                        View My Work
+                        <i class="fas fa-arrow-right"></i>
+                    </button>
+                    <button class="btn btn-secondary" onclick="showPage('contact')">
+                        <i class="fas fa-comments"></i>
+                        Let's Talk
+                    </button>
+                </div>
+
+                <div class="stats fade-in">
+                    <div class="stat-item">
+                        <div class="stat-number">50+</div>
+                        <div class="stat-label">Projects Completed</div>
+                    </div>
+                    <div class="stat-item">
+                        <div class="stat-number">3+</div>
+                        <div class="stat-label">Years Experience</div>
+                    </div>
+                    <div class="stat-item">
+                        <div class="stat-number">100%</div>
+                        <div class="stat-label">Client Satisfaction</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- About Page -->
+    <div class="page" id="about">
+        <div class="about-content">
+            <div class="container">
+                <h1 class="section-title">About Me</h1>
+                <p class="section-subtitle">
+                    Passionate developer with a mission to create innovative solutions that impact millions of users
+                </p>
+
+                <div class="about-grid">
+                    <div class="about-text">
+                        <h2>My Journey</h2>
+                        <p>
+                            Started as a curious teenager tinkering with HTML and CSS, I've evolved into a full-stack developer 
+                            who thrives on solving complex problems with elegant solutions. My passion lies in creating 
+                            user-centric applications that not only look beautiful but perform exceptionally.
+                        </p>
+                        <p>
+                            When I'm not coding, you'll find me exploring the latest tech trends, contributing to open-source 
+                            projects, or mentoring aspiring developers. I believe in continuous learning and staying ahead 
+                            of the curve in this ever-evolving tech landscape.
+                        </p>
+                        
+                        <div class="tech-tags">
+                            <span class="tech-tag">JavaScript</span>
+                            <span class="tech-tag">React</span>
+                            <span class="tech-tag">Node.js</span>
+                            <span class="tech-tag">Python</span>
+                            <span class="tech-tag">AWS</span>
+                            <span class="tech-tag">Docker</span>
+                        </div>
+                    </div>
+
+                    <div class="about-visual">
+                        <div class="visual-icon">
+                            <i class="fas fa-code"></i>
+                        </div>
+                        <h3>Code is Art</h3>
+                        <p>Every line of code is a brushstroke in the masterpiece of digital innovation</p>
+                    </div>
+                </div>
+
+                <div class="achievements">
+                    <div class="achievement-card">
+                        <div class="achievement-icon">
+                            <i class="fas fa-trophy"></i>
+                        </div>
+                        <h3>Best Project Award</h3>
+                        <p>University Innovation Contest 2023</p>
+                    </div>
+                    <div class="achievement-card">
+                        <div class="achievement-icon">
+                            <i class="fas fa-star"></i>
+                        </div>
+                        <h3>5-Star Rating</h3>
+                        <p>Average client satisfaction score</p>
+                    </div>
+                    <div class="achievement-card">
+                        <div class="achievement-icon">
+                            <i class="fas fa-bullseye"></i>
+                        </div>
+                        <h3>Mission Driven</h3>
+                        <p>Creating solutions that matter</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Resume Page -->
+    <div class="page" id="resume">
+        <div class="resume-content">
+            <div class="container">
+                <h1 class="section-title">Resume & Skills</h1>
+                <div style="text-align: center;">
+                    <a href="#" class="download-btn">
+                        <i class="fas fa-download"></i>
+                        Download Resume
+                    </a>
+                </div>
+
+                <h2 class="section-title" style="font-size: 2rem; margin-top: 3rem;">Technical Skills</h2>
+                <div class="skills-grid">
+                    <div class="skill-card">
+                        <div class="skill-header">
+                            <div class="skill-icon">
+                                <i class="fas fa-code"></i>
+                            </div>
+                            <div class="skill-info">
+                                <h3>Frontend Development</h3>
+                                <span>95%</span>
+                            </div>
+                        </div>
+                        <div class="skill-bar">
+                            <div class="skill-progress" style="width: 95%"></div>
+                        </div>
+                    </div>
+
+                    <div class="skill-card">
+                        <div class="skill-header">
+                            <div class="skill-icon">
+                                <i class="fas fa-server"></i>
+                            </div>
+                            <div class="skill-info">
+                                <h3>Backend Development</h3>
+                                <span>88%</span>
+                            </div>
+                        </div>
+                        <div class="skill-bar">
+                            <div class="skill-progress" style="width: 88%"></div>
+                        </div>
+                    </div>
+
+                    <div class="skill-card">
+                        <div class="skill-header">
+                            <div class="skill-icon">
+                                <i class="fas fa-palette"></i>
+                            </div>
+                            <div class="skill-info">
+                                <h3>UI/UX Design</h3>
+                                <span>82%</span>
+                            </div>
+                        </div>
+                        <div class="skill-bar">
+                            <div class="skill-progress" style="width: 82%"></div>
+                        </div>
+                    </div>
+
+                    <div class="skill-card">
+                        <div class="skill-header">
+                            <div class="skill-icon">
+                                <i class="fas fa-mobile-alt"></i>
+                            </div>
+                            <div class="skill-info">
+                                <h3>Mobile Development</h3>
+                                <span>78%</span>
+                            </div>
+                        </div>
+                        <div class="skill-bar">
+                            <div class="skill-progress" style="width: 78%"></div>
+                        </div>
+                    </div>
+
+                    <div class="skill-card">
+                        <div class="skill-header">
+                            <div class="skill-icon">
+                                <i class="fas fa-cloud"></i>
+                            </div>
+                            <div class="skill-info">
+                                <h3>DevOps & Cloud</h3>
+                                <span>85%</span>
+                            </div>
+                        </div>
+                        <div class="skill-bar">
+                            <div class="skill-progress" style="width: 85%"></div>
+                        </div>
+                    </div>
+
+                    <div class="skill-card">
+                        <div class="skill-header">
+                            <div class="skill-icon">
+                                <i class="fas fa-brain"></i>
+                            </div>
+                            <div class="skill-info">
+                                <h3>AI/ML Integration</h3>
+                                <span>75%</span>
+                            </div>
+                        </div>
+                        <div class="skill-bar">
+                            <div class="skill-progress" style="width: 75%"></div>
+                        </div>
+                    </div>
+                </div>
+
+                <h2 class="section-title" style="font-size: 2rem; margin-top: 3rem;">Work Experience</h2>
+                <div class="experience-timeline">
+                    <div class="timeline-item">
+                        <div class="timeline-header">
+                            <div class="timeline-title">
+                                <h3>Senior Full-Stack Developer</h3>
+                                <div class="timeline-company">TechCorp Solutions</div>
+                            </div>
+                            <div class="timeline-period">
+                                <i class="fas fa-calendar"></i>
+                                2022 - Present
+                            </div>
+                        </div>
+                        <div class="timeline-description">
+                            Leading development of enterprise-level applications and mentoring junior developers.
+                        </div>
+                        <ul class="timeline-achievements">
+                            <li>Improved app performance by 40%</li>
+                            <li>Led team of 5 developers</li>
+                            <li>Implemented CI/CD pipeline</li>
+                        </ul>
+                    </div>
+
+                    <div class="timeline-item">
+                        <div class="timeline-header">
+                            <div class="timeline-title">
+                                <h3>Frontend Developer</h3>
+                                <div class="timeline-company">StartupXYZ</div>
+                            </div>
+                            <div class="timeline-period">
+                                <i class="fas fa-calendar"></i>
+                                2020 - 2022
+                            </div>
+                        </div>
+                        <div class="timeline-description">
+                            Developed responsive web applications and collaborated with design teams.
+                        </div>
+                        <ul class="timeline-achievements">
+                            <li>Built 10+ React applications</li>
+                            <li>Reduced load time by 60%</li>
+                            <li>Implemented design system</li>
+                        </ul>
+                    </div>
+
+                    <div class="timeline-item">
+                        <div class="timeline-header">
+                            <div class="timeline-title">
+                                <h3>Web Developer</h3>
+                                <div class="timeline-company">Freelance</div>
+                            </div>
+                            <div class="timeline-period">
+                                <i class="fas fa-calendar"></i>
+                                2019 - 2020
+                            </div>
+                        </div>
+                        <div class="timeline-description">
+                            Worked with various clients to deliver custom web solutions.
+                        </div>
+                        <ul class="timeline-achievements">
+                            <li>Completed 25+ projects</li>
+                            <li>100% client satisfaction</li>
+                            <li>Expanded skillset rapidly</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Portfolio Page -->
+    <div class="page" id="portfolio">
+        <div class="portfolio-content">
+            <div class="container">
+                <h1 class="section-title">My Portfolio</h1>
+                <p class="section-subtitle">
+                    A showcase of innovative projects that demonstrate my expertise across various technologies
+                </p>
+
+                <div class="filter-buttons">
+                    <button class="filter-btn active" onclick="filterProjects('all')">All Projects</button>
+                    <button class="filter-btn" onclick="filterProjects('Full Stack')">Full Stack</button>
+                    <button class="filter-btn" onclick="filterProjects('Frontend')">Frontend</button>
+                    <button class="filter-btn" onclick="filterProjects('Mobile')">Mobile</button>
+                    <button class="filter-btn" onclick="filterProjects('Web3')">Web3</button>
+                    <button class="filter-btn" onclick="filterProjects('IoT')">IoT</button>
+                    <button class="filter-btn" onclick="filterProjects('AR/VR')">AR/VR</button>
+                </div>
+
+                <div class="projects-grid" id="projectsGrid">
+                    <!-- Projects will be dynamically inserted here -->
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Contact Page -->
+    <div class="page" id="contact">
+        <div class="contact-content">
+            <div class="container">
+                <h1 class="section-title">Let's Connect</h1>
+                <p class="section-subtitle">
+                    Ready to bring your ideas to life? Let's discuss your next project and create something amazing together.
+                </p>
+
+                <div class="contact-grid">
+                    <div class="contact-info">
+                        <div class="contact-intro">
+                            <h2>Get In Touch</h2>
+                            <p>
+                                Whether you have a project in mind, want to collaborate, or just want to say hello, 
+                                I'd love to hear from you. Let's turn your vision into reality.
+                            </p>
+                        </div>
+
+                        <a href="mailto:Rishabhjain92148@gmail.com" class="contact-item">
+                            <div class="contact-icon">
+                                <i class="fas fa-envelope"></i>
+                            </div>
+                            <div class="contact-details">
+                                <h3>Email</h3>
+                                <p>Rishabhjain92148@gmail.com</p>
+                            </div>
+                        </a>
+
+                        <a href="tel:+919214805770" class="contact-item">
+                            <div class="contact-icon">
+                                <i class="fas fa-phone"></i>
+                            </div>
+                            <div class="contact-details">
+                                <h3>Phone</h3>
+                                <p>+91 9214805770</p>
+                            </div>
+                        </a>
+
+                        <div class="contact-item">
+                            <div class="contact-icon">
+                                <i class="fas fa-map-marker-alt"></i>
+                            </div>
+                            <div class="contact-details">
+                                <h3>Location</h3>
+                                <p>Jaipur, Rajasthan</p>
+                            </div>
+                        </div>
+
+                        <div style="margin-top: 2rem;">
+                            <h3 style="margin-bottom: 1rem;">Follow Me</h3>
+                            <div class="social-links">
+                                <!-- Social links will be populated by JavaScript -->
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="contact-form">
+                        <h3 style="margin-bottom: 2rem; font-size: 1.5rem;">Send Message</h3>
+                        <form id="contactForm">
+                            <div class="form-row">
+                                <div class="form-group">
+                                    <label for="firstName">First Name</label>
+                                    <input type="text" id="firstName" class="form-control" placeholder="First Name" required>
+                                </div>
+                                <div class="form-group">
+                                    <label for="lastName">Last Name</label>
+                                    <input type="text" id="lastName" class="form-control" placeholder="Last Name" required>
+                                </div>
+                            </div>
+                            
+                            <div class="form-group">
+                                <label for="email">Email</label>
+                                <input type="email" id="email" class="form-control" placeholder="abc@example.com" required>
+                            </div>
+                            
+                            <div class="form-group">
+                                <label for="subject">Subject</label>
+                                <input type="text" id="subject" class="form-control" placeholder="Subject" required>
+                            </div>
+                            
+                            <div class="form-group">
+                                <label for="message">Message</label>
+                                <textarea id="message" class="form-control" placeholder="Message" required></textarea>
+                            </div>
+                            
+                            <button type="submit" class="submit-btn">
+                                <i class="fas fa-paper-plane"></i>
+                                Send Message
+                            </button>
+                        </form>
+                    </div>
+                </div>
+
+                <div class="cta-section">
+                    <h3>Ready to Start Your Project?</h3>
+                    <p>
+                        Let's discuss your ideas and turn them into reality. I'm here to help you every step of the way.
+                    </p>
+                    <div class="cta-buttons-flex">
+                        <button class="btn btn-primary">
+                            <i class="fas fa-bolt"></i>
+                            Start Project
+                        </button>
+                        <button class="btn btn-secondary" onclick="showPage('portfolio')">
+                            <i class="fas fa-briefcase"></i>
+                            View Portfolio
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div>
+                    <div class="footer-brand">
+                        <div class="logo-icon">RJ</div>
+                        <span class="logo-text">Rishabh Jain</span>
+                    </div>
+                    <p class="footer-description">
+                        Passionate full-stack developer creating innovative digital solutions that make a difference. 
+                        Let's build something amazing together.
+                    </p>
+                </div>
+                
+                <div>
+                    <h4>Quick Links</h4>
+                    <ul class="footer-links">
+                        <li><a href="#" onclick="showPage('home')">Home</a></li>
+                        <li><a href="#" onclick="showPage('about')">About</a></li>
+                        <li><a href="#" onclick="showPage('resume')">Resume</a></li>
+                        <li><a href="#" onclick="showPage('portfolio')">Portfolio</a></li>
+                    </ul>
+                </div>
+                
+                <div>
+                    <h4>Connect</h4>
+                    <ul class="footer-links">
+                        <li><a href="mailto:Rishabhjain92148@gmail.com">Rishabhjain92148@gmail.com</a></li>
+                        <li><a href="tel:+919214805770">+91 9214805770</a></li>
+                    </ul>
+                    <div class="social-links" style="margin-top: 1rem;">
+                        <!-- Footer social links will be populated by JavaScript -->
+                    </div>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <p>© 2025 Rishabh Jain.All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Floating Action Button -->
+    <button class="fab" onclick="showPage('contact')">
+        <i class="fas fa-comments"></i>
+    </button>
+
+    <script src="main.js"></script>
+</body>
+</html>
